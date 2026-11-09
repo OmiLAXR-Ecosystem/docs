@@ -24,5 +24,5 @@ One-time setup:
 
 - Settings → Pages: source "GitHub Actions", custom domain `docs.omilaxr.dev`, enforce HTTPS.
 - DNS: `CNAME docs → omilaxr-ecosystem.github.io`.
-- Secret `MCP_READ_TOKEN` (read access to `OmiLAXR-Ecosystem/OmiLAXR.MCP`) while that repo is private.
+- Secret `MCP_READ_TOKEN` (read access to `OmiLAXR-Ecosystem/OmiLAXR.MCP`) while that repo is private. Without it, the build skips the package docs and publishes only the hand-written pages. Package repos that cannot be cloned (private ones) are skipped with a warning as well.
 - Organization secret `DOCS_DISPATCH_TOKEN` (may start workflows in this repo) for the `docs.yml` workflow of the packages.

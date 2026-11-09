@@ -28,7 +28,9 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       # The docs exporter. MCP_READ_TOKEN (read access to OmiLAXR.MCP) is only needed while that repo is private.
+      # Without it the site is built without package docs (scripts/packages.mjs warns).
       - uses: actions/checkout@v5
+        continue-on-error: true
         with:
           repository: OmiLAXR-Ecosystem/OmiLAXR.MCP
           token: ${{ secrets.MCP_READ_TOKEN || github.token }}
