@@ -9,10 +9,16 @@ const manifests = import.meta.glob<{ default: { slug: string; label: string; ver
 const packages = Object.values(manifests)[0]?.default ?? [];
 ---
 
-<CardGrid>
-  {
-    packages.map((pkg) => (
-      <LinkCard title={`${pkg.label} ${pkg.version}`} description={pkg.description} href={`/${pkg.slug}/`} />
-    ))
-  }
-</CardGrid>
+{
+  packages.length > 0 ? (
+    <CardGrid>
+      {packages.map((pkg) => (
+        <LinkCard title={`${pkg.label} ${pkg.version}`} description={pkg.description} href={`/${pkg.slug}/`} />
+      ))}
+    </CardGrid>
+  ) : (
+    <p>
+      The package reference is not published yet. Until then, see the <a href="https://github.com/OmiLAXR-Ecosystem">package repositories</a> on GitHub.
+    </p>
+  )
+}
