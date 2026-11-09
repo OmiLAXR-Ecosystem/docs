@@ -1,0 +1,22 @@
+/* OmiLAXR palette (same values as omilaxr.dev): navy #23304c, orange #F19937. */
+:root {
+  --sl-color-accent-low: #1c2333;
+  --sl-color-accent: #f19937;
+  --sl-color-accent-high: #fbd7ad;
+}
+
+:root[data-theme="light"] {
+  --sl-color-accent-low: #fbe3c6;
+  --sl-color-accent: #23304c;
+  --sl-color-accent-high: #1a2439;
+}
+
+/* Generated component pages start with a key/value table without a header row. */
+.sl-markdown-content table:has(thead th:empty) thead {
+  display: none;
+}
+
+.sl-markdown-content table:has(thead th:empty) td:first-child {
+  white-space: nowrap;
+  font-weight: 600;
+}

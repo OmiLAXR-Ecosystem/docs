@@ -1,0 +1,16 @@
+{
+  "$comment": "Package repos whose docs are built into the site. ref is the branch or tag to build from (default main). Order here is the order in the sidebar.",
+  "org": "OmiLAXR-Ecosystem",
+  "packages": [
+    { "repo": "OmiLAXR" },
+    { "repo": "OmiLAXR.xAPI" },
+    { "repo": "xAPI4Unity" },
+    { "repo": "OmiLAXR.UnityXR" },
+    { "repo": "OmiLAXR.MetaXR" },
+    { "repo": "OmiLAXR.MRTK2" },
+    { "repo": "OmiLAXR.HypeRate" },
+    { "repo": "OmiLAXR.Pseudonymization" },
+    { "repo": "OmiLAXR.Benchmark" },
+    { "repo": "OmiLAXR.ReCoPa" }
+  ]
+}

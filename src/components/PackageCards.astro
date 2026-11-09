@@ -1,0 +1,18 @@
+---
+// One card per package from the generated manifest; empty before `make packages` has run.
+import { CardGrid, LinkCard } from "@astrojs/starlight/components";
+
+const manifests = import.meta.glob<{ default: { slug: string; label: string; version: string; description?: string }[] }>(
+  "../generated/packages.json",
+  { eager: true },
+);
+const packages = Object.values(manifests)[0]?.default ?? [];
+---
+
+<CardGrid>
+  {
+    packages.map((pkg) => (
+      <LinkCard title={`${pkg.label} ${pkg.version}`} description={pkg.description} href={`/${pkg.slug}/`} />
+    ))
+  }
+</CardGrid>

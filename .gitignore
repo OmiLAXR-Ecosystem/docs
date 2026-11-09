@@ -1,0 +1,17 @@
+node_modules
+dist
+.astro
+.env
+.idea/
+.vscode
+# OS files
+.DS_Store
+Thumbs.db
+
+# Package clones and generated package docs (scripts/packages.mjs).
+# Everything in src/content/docs is generated except the hand-written pages listed here.
+/.packages/
+/src/generated/
+/src/content/docs/*
+!/src/content/docs/index.mdx
+!/src/content/docs/start/
